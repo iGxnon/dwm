@@ -48,4 +48,8 @@ uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/dwm\
 		${DESTDIR}${MANPREFIX}/man1/dwm.1
 
+submit: clean
+	rm -rf .config.h
+	git push
+
 .PHONY: all options clean dist install uninstall
