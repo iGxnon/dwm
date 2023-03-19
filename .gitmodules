@@ -1,0 +1,3 @@
+[submodule "bin/sbar"]
+	path = bin/sbar
+	url = git@github.com:iGxnon/sbar.git
