@@ -86,12 +86,6 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 // static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *dmenucmd[]  = { "rofi", "-show", "drun", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
-static const char *voltoggle[] = { "/home/igxnon/.dwm/bin/vol-ctl.sh", "t", NULL };
-static const char *voldown[] = { "/home/igxnon/.dwm/bin/vol-ctl.sh", "-", NULL  };
-static const char *volup[]   = { "/home/igxnon/.dwm/bin/vol-ctl.sh", "+", NULL };
-static const char *allnotify[]   = { "/home/igxnon/.dwm/bin/all-notify.sh", NULL };
-static const char *backlightup[]   = { "/home/igxnon/.dwm/bin/backlight-ctl.sh", "+", NULL };
-static const char *backlightdown[] = { "/home/igxnon/.dwm/bin/backlight-ctl.sh", "-", NULL  };
 static const char *lockcmd[] = { "/usr/local/bin/slock", NULL  };
 
 static const Key keys[] = {
@@ -136,12 +130,6 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_l,	   spawn,          {.v = lockcmd } },
-	{ MODKEY,              		XK_F1,     spawn,          {.v = allnotify } },
-	{ MODKEY,              		XK_F2,     spawn,          {.v = backlightdown } },
-	{ MODKEY,              		XK_F3,     spawn,          {.v = backlightup   } },
-	{ MODKEY,              		XK_F6,     spawn,          {.v = voltoggle } },
-	{ MODKEY,              		XK_F7,     spawn,          {.v = voldown } },
-	{ MODKEY,              		XK_F8,     spawn,          {.v = volup   } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
